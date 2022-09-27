@@ -2,27 +2,29 @@
 using namespace std;
 
 int main() {
-      int i,j;
-      int count =0;
-      int arr1[] = {1,2,3,2,5};
-      int visited[5];
+    int count;
+    int  visited[10];
 
- cout << "First Array: ";
-      for (int i=0; i< 5; i++) {
-        cout<< arr1[i] << ' ';
+    int arr1[10] = {1,2,3,4,4,1,1,1,2,4};
+     cout << "Array: ";
+      for (int i=0; i< 10; i++) {
+           cout<< arr1[i] << ' ';
         }
 
-        for(int i=0; i<5; i++){
+    cout <<endl;
+    for(int i=0; i<10; i++){
         if(visited[i] == 1)
             continue;
 
-        for(int j=0; j<5; j++){
+        count = 0;
+        for(int j=0; j<10; j++){
             if(arr1[i] == arr1[j]){
                 visited[j] = 1;
                 count++;
             }
         }
-        cout <<endl<< arr1[i] << ": " << count ;
- }
-            return 0;
+        cout << arr1[i] << ": " << count <<" times"<< endl;
+    }
+
+    return 0;
 }
