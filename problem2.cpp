@@ -45,19 +45,23 @@ cout<<endl<<endl<<endl;
       cout<<endl;
 
 cout <<"Common Element: ";
+int count =0;
       for(int i=0;i<5;i++)
        {
         for(int j=0;j<3;j++)
         {
             if(arr3[i]==arr4[j]){
             cout<<arr1[i]<<" ";
+            count++;
+            break;
             }
         }
-
-
     }
 
+  if(count == 0){
+                cout<<"No common element";
 
+            }
 
     return 0;
     }
